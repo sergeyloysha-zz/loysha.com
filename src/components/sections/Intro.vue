@@ -41,7 +41,6 @@ export default {
 <style lang="scss" scoped>
 
   @import './../../assets/styles/vendor/normalize';
-  @import './../../assets/styles/fonts';
   @import './../../assets/styles/variables';
   @import './../../assets/styles/functions';
 
