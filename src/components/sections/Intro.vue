@@ -46,26 +46,41 @@ export default {
 
   .intro {
     position: relative;
-    padding: 5rem 0;
+    padding: 3rem 0;
 
     display: flex;
     align-items: center;
 
     z-index: 1;
+
+    @media screen and (min-width: $desktop){
+      padding: 5rem 0;
+    }
   }
 
   .gist {
     &__header {
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
+
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 5rem;
+      }
     }
 
     &__line {
-      max-width: cell(10);
+
+      @media screen and (min-width: $desktop) {
+        max-width: cell(10);
+      }
 
       h1 {
         font-weight: 300;
-        font-size: 3.8rem;
+        font-size: 2.8rem;
         margin: 0;
+
+        @media screen and (min-width: $desktop) {
+          font-size: 3.8rem;
+        }
       }
 
       a {
@@ -99,8 +114,12 @@ export default {
   }
 
   .clients {
-    display: flex;
-    align-items: center;
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+    }
 
     &__heading {
       font-weight: 500;
@@ -133,14 +152,25 @@ export default {
 
   .header {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+
+    @media screen and (min-width: $desktop) {
+      align-items: center;
+      flex-direction: row;
+    }
 
     &__photo {
       flex-shrink: 0;
-      width: 6.4rem;
+      width: 4.8rem;
       margin-right: 2rem;
       border-radius: 100%;
       overflow: hidden;
+      margin-bottom: 1rem;
+
+      @media screen and (min-width: $desktop) {
+        width: 6.4rem;
+        margin-bottom: 0;
+      }
 
       img {
         display: block;

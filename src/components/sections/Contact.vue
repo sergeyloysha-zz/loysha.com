@@ -40,27 +40,42 @@ export default {
   @import './../../assets/styles/variables';
 
   .contact {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     width: 100%;
     z-index: 2;
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 
   .footer {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     border-top: 1px solid rgba($color-black, .05);
-    padding: 2rem 1.5rem;
+    padding: 2rem 0;
+
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      align-items: center;
+      padding: 2rem 1.5rem;
+    }
 
     &__copy {
+      display: none;
       color: rgba($color-black, .3);
+
+      @media screen and (min-width: $desktop) {
+        display: block;
+      }
     }
 
     &__list {
       display: flex;
+      flex-wrap: wrap;
     }
 
     &__item {

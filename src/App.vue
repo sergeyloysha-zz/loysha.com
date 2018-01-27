@@ -47,7 +47,6 @@ export default {
     font-style: normal;
   }
 
-
   @font-face {
     font-family: 'Graphik';
     src: url('./assets/fonts/Graphik-Light.woff2') format('woff2'),
@@ -96,21 +95,29 @@ export default {
 
   html {
     font-size: 62.5%;
-    height: 100%;
+
+    @media screen and (min-width: $desktop) {
+      height: 100%;
+    }
   }
 
   body {
     font: 400 1.4rem/1.5 'Graphik', 'Helvetica Neue', 'Segoe UI', sans-serif;
-    height: 100%;
+
+    @media screen and (min-width: $desktop) {
+      height: 100%;
+    }
   }
 
   .app {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
-
     padding: 0 1.5rem;
+
+    @media screen and (min-width: $desktop) {
+      height: 100%;
+    }
   }
 
   .container {
@@ -122,8 +129,9 @@ export default {
   .section {
 
     &_intro {
-      height: 100%;
-      flex-shrink: 0;
+      @media screen and (min-width: $desktop) {
+        height: 100%;
+      }
     }
 
     &_contact {
