@@ -3,21 +3,14 @@
     <div class="container">
       <footer class="footer">
         <div class="footer__copy">© 2017 — Sergey Loysha</div>
-        <div class="footer__list">
-          <div class="footer__item">
-            <a href="mailto:sergeyloysha@gmail.com" class="footer__link" target="_blank">Email</a>
-          </div>
-          <div class="footer__item">
-            <a href="//dribbble.com/loysha" class="footer__link" target="_blank">Dribbble</a>
-          </div>
-          <div class="footer__item">
-            <a href="//t.me/loysha" class="footer__link" target="_blank">Telegram</a>
-          </div>
-          <div class="footer__item">
-            <a href="//www.instagram.com/sergeyloysha/" class="footer__link" target="_blank">Instagram</a>
-          </div>
-          <div class="footer__item">
-            <a href="//twitter.com/sergeyloysha" class="footer__link" target="_blank">Twitter</a>
+        <div
+          v-if="links"
+          class="footer__list">
+          <div
+            v-for="(link, index) in links"
+            :key="index"
+            class="footer__item">
+            <a :href="link.link" class="footer__link" target="_blank">{{ link.type }}</a>
           </div>
         </div>
       </footer>
@@ -28,6 +21,13 @@
 <script>
 export default {
   name: 'contact',
+
+  props: {
+    links: {
+      type: Array
+    },
+  },
+
   data () {
     return {
     }

@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="app">
     <intro/>
-    <contact/>
+    <contact :links="social"/>
   </div>
 </template>
 
@@ -20,6 +20,41 @@ export default {
 
   data () {
     return {
+      about: {
+        name: {
+          first: 'Sergey',
+          last: 'Loysha'
+        },
+        position: ['Front-end Developer', 'Digital Product Designer'],
+        about: 'Currently front-end developer at <a href="//darwinapps.com" target="_blank">@darwinapps</a>. Also crafting front-end & design for digital products &ndash; exclusively for founders and startups.'
+      },
+
+      social: [
+        {
+          type: 'Email',
+          link: 'mailto:sergeyloysha@gmail.com'
+        },
+        {
+          type: 'Github',
+          link: '//github.com/sergeyloysha'
+        },
+        {
+          type: 'Dribbble',
+          link: '//dribbble.com/loysha'
+        },
+        {
+          type: 'Telegram',
+          link: '//t.me/loysha'
+        },
+        // {
+        //   type: 'Twitter',
+        //   link: '//twitter.com/sergeyloysha'
+        // },
+        // {
+        //   type: 'Instagram',
+        //   link: '//www.instagram.com/sergeyloysha'
+        // }
+      ]
     }
   }
 
