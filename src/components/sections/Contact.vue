@@ -2,7 +2,7 @@
   <section class="section section_contact contact">
     <div class="container">
       <footer class="footer">
-        <div class="footer__copy">© 2017 — Sergey Loysha</div>
+        <div class="footer__copy">© {{ year }} — Sergey Loysha</div>
         <div
           v-if="links"
           class="footer__list">
@@ -30,6 +30,13 @@ export default {
 
   data () {
     return {
+
+    }
+  },
+
+  computed: {
+    year: function () {
+      return new Date().getFullYear()
     }
   }
 }
