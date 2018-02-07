@@ -75,7 +75,7 @@ export default {
 
       h1 {
         font-weight: 300;
-        font-size: 2.8rem;
+        font-size: 2.7rem;
         margin: 0;
 
         @media screen and (min-width: $desktop) {
