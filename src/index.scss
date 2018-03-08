@@ -1,0 +1,15 @@
+@import './styles/vendor/normalize';
+@import './styles/variables';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 400 1.4rem/1.5 '-apple-system', BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  letter-spacing: .05rem;
+  background-color: map-get($colors, white);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
