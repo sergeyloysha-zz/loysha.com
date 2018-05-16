@@ -297,13 +297,245 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: Hellix;
+  src: url("../fonts/Hellix-Thin.woff2") format("woff2"), url("../fonts/Hellix-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: Hellix;
+  src: url("../fonts/Hellix-Light.woff2") format("woff2"), url("../fonts/Hellix-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: Hellix;
+  src: url("../fonts/Hellix-Regular.woff2") format("woff2"), url("../fonts/Hellix-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: Hellix;
+  src: url("../fonts/Hellix-Medium.woff2") format("woff2"), url("../fonts/Hellix-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: Hellix;
+  src: url("../fonts/Hellix-SemiBold.woff2") format("woff2"), url("../fonts/Hellix-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: Hellix;
+  src: url("../fonts/Hellix-Bold.woff2") format("woff2"), url("../fonts/Hellix-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: Hellix;
+  src: url("../fonts/Hellix-ExtraBold.woff2") format("woff2"), url("../fonts/Hellix-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: Hellix;
+  src: url("../fonts/Hellix-Black.woff2") format("woff2"), url("../fonts/Hellix-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
 html {
   font-size: 62.5%; }
 
 body {
-  font: 400 1.4rem/1.5 '-apple-system', BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
-  letter-spacing: .05rem;
+  font: 400 1.6rem/1.5 'Hellix', '-apple-system', BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
   background-color: #ffffff;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+strong {
+  font-weight: 500; }
+
+p {
+  font-size: 1.8rem;
+  margin: 0 0 3rem 0; }
+  p:last-child {
+    margin: 0; }
+
+.app__header {
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 576px) {
+    .app__header {
+      margin-bottom: 4rem; } }
+
+.app__copy {
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 576px) {
+    .app__copy {
+      margin-bottom: 4rem; } }
+
+.app__clients {
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 576px) {
+    .app__clients {
+      margin-bottom: 4rem; } }
+
+.section {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0; }
+  .section_intro {
+    height: 100vh;
+    align-items: center; }
+  .section__content {
+    width: 100%;
+    max-width: 86rem;
+    padding: 0 1.5rem; }
+  .section__row {
+    display: flex;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; }
+  .section__cell {
+    flex: 1 0 0;
+    padding: 0 1.5rem; }
+  .section__heading {
+    font-weight: 500;
+    font-size: 3.2rem;
+    margin: 0 0 2rem 0; }
+
+.header {
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 576px) {
+    .header {
+      flex-direction: row;
+      align-items: center; } }
+  .header__photo {
+    margin: 0 0 1rem 0; }
+    @media screen and (min-width: 576px) {
+      .header__photo {
+        margin: 0 2rem 0 0; } }
+
+.photo {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  background: #f8f8f8; }
+  @media screen and (min-width: 576px) {
+    .photo {
+      width: 6.4rem;
+      height: 6.4rem; } }
+  .photo__src {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%; }
+
+.info__name {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0; }
+
+.info__position {
+  font-weight: 400;
+  font-size: 1.6rem; }
+
+.copy {
+  font-size: 2.7rem;
+  font-weight: 500; }
+  @media screen and (min-width: 576px) {
+    .copy {
+      font-size: 3.8rem; } }
+  .copy__br {
+    display: inline; }
+    @media screen and (min-width: 768px) {
+      .copy__br {
+        display: block; } }
+  .copy__link {
+    position: relative;
+    display: inline-block;
+    color: #3274ff;
+    text-decoration: none; }
+    .copy__link:hover::before {
+      left: 0;
+      right: 0;
+      background: #3274ff; }
+    .copy__link::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 2%;
+      right: 2%;
+      bottom: .2rem;
+      height: .2rem;
+      border-radius: .2rem;
+      background: rgba(50, 116, 255, 0.5);
+      transition: .25s; }
+    .copy__link::after {
+      content: '.';
+      position: absolute;
+      color: #000000;
+      padding-right: 1rem; }
+
+.clients {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .clients {
+      display: flex;
+      align-items: center; } }
+  .clients__list {
+    display: flex;
+    align-items: center; }
+  .clients__heading {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #000000;
+    margin-right: 2rem; }
+  .clients__item {
+    font-size: 1.6rem;
+    margin-right: .5rem;
+    color: rgba(0, 0, 0, 0.6); }
+    .clients__item:not(:last-child)::after {
+      content: ','; }
+
+.contacts__list {
+  display: flex;
+  align-items: center; }
+
+.contacts__item {
+  margin-right: 1.5rem; }
+
+.contact {
+  display: block;
+  opacity: .2;
+  transition: .25s; }
+  .contact__source {
+    display: block;
+    width: 3.2rem;
+    height: auto; }
+  .contact:hover {
+    opacity: .6; }
+
+.skills {
+  background: #f8f8f8;
+  padding: 3rem 4rem; }
+
+.definition-list {
+  margin: 0; }
+  .definition-list__title {
+    font-weight: 500;
+    font-size: 2.2rem;
+    margin-bottom: 1rem; }
+  .definition-list__description {
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin: 0 0 2rem 0; }
+    .definition-list__description:last-child {
+      margin: 0; }
