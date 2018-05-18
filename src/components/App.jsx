@@ -81,7 +81,7 @@ class App extends Component {
           </div>
         </section>
 
-        <section className="section section_about app__section">
+        {/* <section className="section section_about app__section">
           <div className="section__content">
               
 
@@ -111,7 +111,7 @@ class App extends Component {
 
                 </div>
               </div>
-        </section>
+        </section> */}
 
       </div>
     )
