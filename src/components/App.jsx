@@ -44,7 +44,7 @@ const Header = (props) => {
 
 const Copy = (props) => {
   return (
-    <div className="copy app__copy">Currently CTO at <div className="copy__br"></div><a href="http://mamon.pro" className="copy__link">@mamonpro</a>&nbsp;&nbsp;Also crafting front-end & <div className="copy__br"></div>design for digital products – exclusively for <div className="copy__br"></div>founders and startups.</div>
+    <div className="copy app__copy">Currently front-end developer and CTO at <div className="copy__br"></div><a href="http://mamon.pro" className="copy__link">@mamonpro</a>&nbsp;&nbsp;Also crafting front-end & <div className="copy__br"></div>design for digital products – exclusively for <div className="copy__br"></div>founders and startups.</div>
   )
 }
 
