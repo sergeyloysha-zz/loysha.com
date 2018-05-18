@@ -448,11 +448,11 @@ p {
   font-size: 1.6rem; }
 
 .copy {
-  font-size: 2.7rem;
+  font-size: 2.4rem;
   font-weight: 500; }
   @media screen and (min-width: 576px) {
     .copy {
-      font-size: 3.8rem; } }
+      font-size: 3.2rem; } }
   .copy__br {
     display: inline; }
     @media screen and (min-width: 768px) {
